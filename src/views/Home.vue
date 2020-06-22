@@ -1,18 +1,23 @@
-<template>
+O<template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <o-header/>
+    <o-content>
+      <o-users/>
+    </o-content>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import OHeader from '@/components/O-Header.vue';
+import OContent from '@/components/O-Content.vue';
+import OUsers from '@/components/O-Users.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    OHeader,
+    OContent,
+    OUsers,
   },
 };
 </script>
