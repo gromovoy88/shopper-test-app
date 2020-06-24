@@ -27,8 +27,9 @@
 </template>
 
 <script>
+import { mutations, store } from '@/store';
 import usersApi from '@/api';
-import MUserInfo from '@/components/M-UserInfo.vue';
+import MUserInfo from '@/components/molecules/M-UserInfo.vue';
 
 export default {
   name: 'Users',
@@ -37,12 +38,15 @@ export default {
   },
   data() {
     return {
-      users: null,
       currentUser: null,
     };
   },
   async mounted() {
-    this.users = await usersApi.getUsers();
+    usersApi.getUsers().then((users) => mutations.setUsers(users));
+    usersApi.getPosts().then((posts) => mutations.setPosts(posts));
+    usersApi.getComments()
+      .then((comments) => mutations.setComments(comments))
+      .catch(() => mutations.setComments([]));
   },
   methods: {
     setCurrentUser(lastName) {
@@ -72,6 +76,11 @@ export default {
         this.users = await usersApi.getUsers();
         this.setCurrentUser(value);
       });
+    },
+  },
+  computed: {
+    users() {
+      return store.users;
     },
   },
 };

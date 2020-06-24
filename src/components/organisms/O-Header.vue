@@ -2,7 +2,7 @@
   <div class="header-container">
     <div class="header">
       <div class="logo">
-        <img src="../assets/logo.png" alt="Logotype" class="logo-img">
+        <img src="../../assets/logo.png" alt="Logotype" class="logo-img">
         <div class="logo-text">
           <span>
             <strong>Test app for shopper</strong>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import MNavigation from '@/components/M-Navigation.vue';
+import MNavigation from '@/components/molecules/M-Navigation.vue';
 
 export default {
   name: 'Header',

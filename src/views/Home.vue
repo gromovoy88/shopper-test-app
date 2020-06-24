@@ -8,9 +8,9 @@ O<template>
 </template>
 
 <script>
-import OHeader from '@/components/O-Header.vue';
-import OContent from '@/components/O-Content.vue';
-import OUsers from '@/components/O-Users.vue';
+import OHeader from '@/components/organisms/O-Header.vue';
+import OContent from '@/components/organisms/O-Content.vue';
+import OUsers from '@/components/organisms/O-Users.vue';
 
 export default {
   name: 'Home',

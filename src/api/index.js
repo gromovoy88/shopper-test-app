@@ -54,6 +54,17 @@ const usersApi = {
       .then((response) => response.data.result)
       .catch(() => null);
   },
+  getComments() {
+    return instance
+      .get('/comments', {
+        params: {
+          'access-token': ACCESS_TOKEN,
+          _format: 'json',
+        },
+      })
+      .then((response) => response.data.result)
+      .catch(() => null);
+  },
 };
 
 export default usersApi;
