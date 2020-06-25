@@ -8,6 +8,13 @@
     </div>
     <div class="post-item-comments">
       <comment-list :comments="postsComments"/>
+      <a
+        class="activator"
+        :class="isShowComments ? 'show-comments' : 'hide-comments'"
+        @click="isShowComments = !isShowComments"
+      >
+        <span>{{ isShowComments ? 'Show comments' : 'Hide comments' }}</span>
+      </a>
     </div>
   </div>
 </template>
@@ -27,6 +34,7 @@ export default {
   data() {
     return {
       postId: this.post.id,
+      isShowComments: false,
     };
   },
   computed: {

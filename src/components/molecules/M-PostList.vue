@@ -16,6 +16,7 @@
           </li>
         </ul>
         <a
+          class="activator"
           :class="isShowAllPosts ? 'show-less' : 'show-more'"
           @click="isShowAllPosts = !isShowAllPosts"
         >

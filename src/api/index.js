@@ -4,7 +4,7 @@ const ACCESS_TOKEN = 'ow8IC2Djhy4MubgjhFWjx9JUlKI44S49AsJF';
 const BASE_API_URL = 'https://gorest.co.in/public-api/';
 const config = {
   baseURL: BASE_API_URL,
-  timeout: 1000,
+  timeout: 4000,
   headers: { Authorization: `Bearer ${ACCESS_TOKEN}` },
   params: {
     'access-token': ACCESS_TOKEN,

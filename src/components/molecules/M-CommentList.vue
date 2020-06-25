@@ -1,5 +1,5 @@
 <template>
-  <div class="comment-list-wrapper" v-if="comments.length !== 0">
+  <div class="comment-list-wrapper" v-if="comments.length !== 0 && showComments">
     <ul class="comment-list">
       <li
         v-for="comment in comments"
@@ -20,6 +20,7 @@ export default {
     'comment-item': ACommentItem,
   },
   props: {
+    showComments: Boolean,
     comments: Array,
   },
 };
