@@ -1,4 +1,4 @@
-# shopper-test-app
+# test-app-vue
 
 ## Project setup
 ```
